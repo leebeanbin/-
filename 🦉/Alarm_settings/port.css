@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+}
+
+.first_tab{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 60px;
+
+    text-align: center;
+    align-items: center;
+
+    background-color: #252525;
+    color: white;
+}
+
+.first_tab h1{
+    grid-column: 2/3;
+}
+
+.first_tab h5{
+    padding: 15px 10px 0px 40px;
+}
+
+.Inner{
+    margin:0px;
+}
+
+/* Above all, it's about the header, which means like title. */ 
+
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 15px;
+    border: 2px solid black;
+
+    width: 130px;
+    height: 20px;
+
+    margin: 15px;
+}
+
+
