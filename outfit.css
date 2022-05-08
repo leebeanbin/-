@@ -1,3 +1,7 @@
+body{
+    margin: 0px;
+}
+
 /* inline elements */
 a{
     text-decoration: none;
@@ -16,17 +20,41 @@ a:active{
 a:hover{
     color:skyblue;
     font-size: larger;
-}
+} /* Now, it's overlapped. */
 /* Above of all, I assigned the tags of a being seen colorful. */
+
+input{
+    border: 1px solid skyblue;
+    border-radius: 15%;
+}
+
+input:hover{
+    background-color: skyblue;
+    font-weight: bold;
+}
+
+/* Button Css*/
+
 h1{
     font-size: 50px;
     text-align: center;
-    border-bottom: 1px solid black;
     margin: 0px;
     padding: 20px;
 }
 
 /* Body area */ 
+
+#Title_setup{
+    display: grid;
+    grid-template-rows: 100px 20px;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+#Button_setup{
+    display: inline;
+}
+
 #grid{
     display: grid;
     grid-template-columns: 241px 1fr;
