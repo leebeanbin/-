@@ -1,67 +1,55 @@
-function NIGHT(){
-    var backColor = document.querySelector("body")
-    backColor.style.color = "white";
-    backColor.style.backgroundColor = "black";
+var backColor = document.querySelector("body");
 
-    var title_color = document.getElementsByClassName("Lists");
-    for ( var i = 0; i < title_color.length; i ++){
-        title_color[i].style.color = "white";
-    }
 
-    var border_color = document.getElementsByClassName("borderColor");
-    for ( var i = 0; i < border_color.length; i ++){
-        border_color[i].style.color = "white"
-    }
-
+function bottomColor(type){
+    var every_div = document.getElementsByTagName("div");
+    every_div[0].style.borderBottomColor = type;
+    
 }
 
-function DAY(){
-    var backColor = document.querySelector("body")
-    backColor.style.color = "black";
-    backColor.style.backgroundColor = "white";
+function Link(sel){
+    var anchor_color = document.querySelectorAll("a");
 
-    var title_color = document.getElementsByClassName("Lists");
-    for ( var i = 0; i < title_color.length; i ++){
-        title_color[i].style.color = "black";
-    }
+    bottomColor(sel);
 
-    var border_color = document.getElementsByClassName("borderColor");
-    for ( var i = 0; i < border_color.length; i ++){
-        border_color[i].style.color = "black"
+    var i = 0;
+    while (i < anchor_color.length){
+        anchor_color[i].style.color = sel;
+        anchor_color[i].style.borderColor = sel;
+        i++;
     }
+    
 
 }
 
 function Changer(){
-    var backColor = document.querySelector("body")
-    if(backColor.style.color = "black"){
-        
+
+    var one_button = document.querySelector("#weather");
+    var border_color = document.getElementById("borderColor");
+
+    if(one_button.value === "NIGHT"){
+
+        one_button.value = 'day';
+
         backColor.style.color = "white";
+        border_color.style.color = "white";
+        border_color.style.borderRightColor ="white";
+        Link("white");
+
         backColor.style.backgroundColor = "black";
-
-        var title_color = document.getElementsByClassName("Lists");
-        for ( var i = 0; i < title_color.length; i ++){
-            title_color[i].style.color = "white";
-        }
-
-        var border_color = document.getElementsByClassName("borderColor");
-        for ( var i = 0; i < border_color.length; i ++){
-            border_color[i].style.color = "white"
-        }
-        }
-
+        
+}
     else{
+
+        one_button.value = 'NIGHT';
+        
         backColor.style.color = "black";
+        border_color.style.color = "black";
+        border_color.style.borderRightColor ="black";
+        Link("black");
+
         backColor.style.backgroundColor = "white";
 
-        var title_color = document.getElementsByClassName("Lists");
-        for ( var i = 0; i < title_color.length; i ++){
-        title_color[i].style.color = "black";
     }
 
-        var border_color = document.getElementsByClassName("borderColor");
-        for ( var i = 0; i < border_color.length; i ++){
-        border_color[i].style.color = "black"
-    }    
-}
-}
+    }

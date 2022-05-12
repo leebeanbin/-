@@ -1,24 +1,39 @@
+var i = 0;
 
-function color(){
+function overlap(color){
     var elements = document.getElementsByClassName("C1");
-    for ( var i = 0; i < elements.length; i++){
-        elements[i].style.color = "white";
+    for ( var c = 0; c < elements.length; c++){
+        elements[c].style.color = color;
     }
 
     var backColor = document.getElementById("ground");
-    backColor.style.backgroundColor = "black"
+    if (color === "white"){
+        backColor.style.backgroundColor = "black";
+    }
+    else{
+        backColor.style.backgroundColor = "white";
+    }
+    
+}
 
+function color(){
+    overlap("white")
+
+    i ++;
+    if (i > 5){
+        alert("BOOM!");
+
+        if(i > 6){
+            i = 0;
+        }
+    }
 }
 
 function Return(){
-    var elements = document.getElementsByClassName("C1");
-    for ( var i = 0; i < elements.length; i++){
-        elements[i].style.color = "black";
-    }
-
-    var ReBackColor = document.getElementById("ground");
-    ReBackColor.style.backgroundColor = "white"
-
-
+    overlap("black")
 }
+
+
+
+
 
