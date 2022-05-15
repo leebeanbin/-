@@ -1,0 +1,1 @@
+function what(o){console.log("Hello"+o)}what("Bin!");
